@@ -1,3 +1,4 @@
+//import all the necessary plugins
 #include <iostream>
 #include <cstdlib>
 #include <stdio.h>
@@ -8,6 +9,7 @@
 
 using namespace std;
 
+//identifying all the necessary variables
 int N = 40;
 int iterMax = 1000000;
 double demE = 0;
@@ -31,19 +33,19 @@ double rand_float(double a, double b) {
     return ((double)rand() / RAND_MAX) * (b - a) + a;
 }
 
-
+//the main function that conducts the simulation
 int main(){
         double partV[N];
         double demon[iterMax];
-        //the seed is different each time for random number
+        //the seed is different each time for random number, so that diff iterations aren't the same
         srand(time(0));
         
-        //start with same v
+        //start with same velocity v
         for(int countV=0; countV < N+1; countV++){
             partV[countV]= float((sqrt(2*totE))/(sqrt(N)));
         }
     
-        //reach equilibrium
+        //let the system reach equilibrium
         for (int countIter=0; countIter < iterMax; countIter++){
             for (int countPart = 0; countPart<N; countPart++){
                 SaveIntoFile(demon);
@@ -75,7 +77,7 @@ int main(){
             }
         }
         
-        //this is just to check that the equilibrium energy makes sense
+        //this part is just to check that the equilibrium energy makes sense
         double sumVel = 0;
         for (int count = 0; count < N; count++){
             sumVel = sumVel + partV[count];
