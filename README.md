@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @defnetanyer. I am a second year honours mathematical physics student from University of Waterloo. I have been coding since grade 10 
-and I code in python and cpp.
+and I code in python and C++.
 
 - 👀 I’m interested in data analysis or research assistant positions. I like working on projects where I can improve my coding skills as well as see the
 product of my work, such as plotting graphs etc.
